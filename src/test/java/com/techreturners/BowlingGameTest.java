@@ -74,7 +74,7 @@ public class BowlingGameTest {
 
 
 
-    @Ignore
+    @Test
     public void getScoreForRollsWithTwoConsecutiveStrikes(){
         int[][] rolls = {{3,0}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {10,0}, {10,0}, {1,0}};
         BowlingGame game = new BowlingGame();
