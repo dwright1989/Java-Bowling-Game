@@ -43,4 +43,11 @@ public class BowlingGameTest {
         assertEquals(79, game.getGameScore(rolls));
     }
 
+    @Test
+    public void getScoreForRollsWithTwoConsecuetiveSpares(){
+        int[][] rolls = {{5,1}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {0,1}, {7,3}, {3,7}, {6}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(85, game.getGameScore(rolls));
+    }
+
 }
