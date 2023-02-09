@@ -81,7 +81,7 @@ public class BowlingGameTest {
         assertEquals(85, game.getGameScore(rolls));
     }
 
-    @Ignore
+    @Test
     public void getScoreForRollsWithTwoConsecutiveStrikesAtEnd(){
         int[][] rolls = {{3,0}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {0,1}, {10,0}, {10,0}, {2,4}};
         BowlingGame game = new BowlingGame();
