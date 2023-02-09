@@ -4,8 +4,12 @@ public class BowlingGame {
 
     private int score = 0;
     public int getGameScore(int[][] rolls){
-        for (int[] roll : rolls) {
-            score += roll[0] + roll[1];
+        for (int i=0; i<10; i++) {
+            if((rolls[i][0]+rolls[i][1])==10){
+                score+=rolls[i][0] + rolls[i][1] + rolls[i+1][0];
+            }else{
+                score += rolls[i][0] + rolls[i][1];
+            }
         }
         return score;
     }
