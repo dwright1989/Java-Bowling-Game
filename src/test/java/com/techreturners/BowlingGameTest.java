@@ -109,4 +109,11 @@ public class BowlingGameTest {
         assertEquals(71, game.getGameScore(rolls));
     }
 
+    @Test
+    public void getScoreForStrikeFollowedBySpare(){
+        int[][] rolls = {{3,0}, {10,0}, {9,1}, {2,1}, {1,8}, {8,1}, {2,1}, {7,0}, {2,1}, {1,0}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(70, game.getGameScore(rolls));
+    }
+
 }
