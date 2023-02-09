@@ -96,10 +96,17 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void getScoreForAllSpareANDStrike(){
+    public void getScoreForSpareANDStrike(){
         int[][] rolls = {{3,0}, {1,9}, {2,4}, {10,0}, {1,8}, {8,1}, {2,1}, {7,0}, {2,1}, {1,0}};
         BowlingGame game = new BowlingGame();
         assertEquals(72, game.getGameScore(rolls));
+    }
+
+    @Test
+    public void getScoreForSpareFollowedByStrike(){
+        int[][] rolls = {{3,0}, {1,9}, {10,0}, {2,1}, {1,8}, {8,1}, {2,1}, {7,0}, {2,1}, {1,0}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(71, game.getGameScore(rolls));
     }
 
 }
