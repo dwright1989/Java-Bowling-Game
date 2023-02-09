@@ -46,7 +46,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void getScoreForRollsWithTwoConsecuetiveSpares(){
+    public void getScoreForRollsWithTwoConsecutiveSpares(){
         int[][] rolls = {{5,1}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {0,1}, {7,3}, {3,7}, {6}};
         BowlingGame game = new BowlingGame();
         assertEquals(85, game.getGameScore(rolls));
@@ -63,6 +63,27 @@ public class BowlingGameTest {
         int[][] rolls = {{3,0}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {0,1}, {7,1}, {10,0}, {2,4}};
         BowlingGame game = new BowlingGame();
         assertEquals(77, game.getGameScore(rolls));
+    }
+
+    @Test
+    public void getScoreForRollsWithTwoStrikes(){
+        int[][] rolls = {{3,0}, {1,7}, {2,4}, {10,0}, {1,8}, {8,1}, {8,1}, {10,0}, {2,1}, {1,0}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(80, game.getGameScore(rolls));
+    }
+
+    @Ignore
+    public void getScoreForRollsWithTwoConsecutiveStrikes(){
+        int[][] rolls = {{3,0}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {10,0}, {10,0}, {1,0}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(85, game.getGameScore(rolls));
+    }
+
+    @Ignore
+    public void getScoreForRollsWithTwoConsecutiveStrikesAtEnd(){
+        int[][] rolls = {{3,0}, {1,7}, {2,4}, {4,4}, {1,8}, {8,1}, {8,1}, {0,1}, {10,0}, {10,0}, {2,4}};
+        BowlingGame game = new BowlingGame();
+        assertEquals(91, game.getGameScore(rolls));
     }
 
 }
